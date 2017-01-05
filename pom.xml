@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.qvc.shoppingcart</groupId>
+  <artifactId>ShoppingCartRestApiApplication</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>ShoppingCartRestApiApplication</name>
+  <description>Project for Spring Boot and XAP</description>
+
+  <repositories>
+    <repository>
+      <id>org.openspaces</id>
+      <url>http://maven-repository.openspaces.org</url>
+    </repository>
+  </repositories>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.4.3.RELEASE</version>
+    <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
+    <!--<gsVersion>12.0.1</gsVersion>-->
+    <gsVersion>10.2.0-13800-RELEASE</gsVersion>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jta-atomikos</artifactId>
+    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.gigaspaces</groupId>-->
+      <!--<artifactId>xap-openspaces</artifactId>-->
+      <!--<version>12.0.1</version>-->
+    <!--</dependency>-->
+    <dependency>
+      <artifactId>gs-runtime</artifactId>
+      <groupId>com.gigaspaces</groupId>
+      <version>${gsVersion}</version>
+    </dependency>
+    <dependency>
+      <artifactId>gs-openspaces</artifactId>
+      <groupId>com.gigaspaces</groupId>
+      <version>${gsVersion}</version>
+    </dependency>
+    <dependency>
+      <artifactId>common</artifactId>
+      <groupId>com.qvc.shoppingcart</groupId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <artifactId>service</artifactId>
+      <groupId>com.qvc.shoppingcart</groupId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <artifactId>space</artifactId>
+      <groupId>com.qvc.shoppingcart</groupId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+
+</project>
