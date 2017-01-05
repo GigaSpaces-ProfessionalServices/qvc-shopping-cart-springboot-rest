@@ -157,8 +157,4 @@ public class CartController {
     return null;
   }
 
-  // TODO
-  private SpaceDocument createPayload(Cart currentCart) {
-    return null;
-  }
 }
